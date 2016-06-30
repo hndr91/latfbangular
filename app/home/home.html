@@ -14,16 +14,18 @@
 
 </head>
 
-<body>
+<body ng-controller="HomeCtrl">
 
     <div class="container">
         <form class="form-signin" role="form">
-            <input type="email" class="form-control" placeholder="Email address" required="" autofocus="">
-            <input type="password" class="form-control" placeholder="Password" required="">
+            <input ng-model="user.email" type="email" class="form-control" placeholder="Email address" required="" autofocus="">
+            <input ng-model="user.password" type="password" class="form-control" placeholder="Password" required="">
             <label class="checkbox">
                 <a href="#"> Sign Up</>
-        </label>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+            </label>
+        <button class="btn btn-lg btn-primary btn-block" type="submit" ng-click="signIn()">Sign in</button>
+        <button class="btn btn-lg btn-warning btn-block" ng-click="signOut()">Sign Out</button>
+        <h3>Hello, <strong>{{ firebaseUser.email }}</strong></h3>
       </form>
 
     </div>

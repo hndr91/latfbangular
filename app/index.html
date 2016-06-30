@@ -19,15 +19,31 @@
 
   <div ng-view></div>
 
-  <!-- In production use:
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
-  -->
+
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+  <!--
   <script src="bower_components/angular/angular.js"></script>
+  -->
   <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="app.js"></script>
   <script src="home/home.js"></script>
   <script src="components/version/version.js"></script>
   <script src="components/version/version-directive.js"></script>
   <script src="components/version/interpolate-filter.js"></script>
+  <!-- AngularFire -->
+  <script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
+  <!-- FB -->
+  <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyCyMHZSm_4driHie9VYaDN821bvVGNJgoQ",
+      authDomain: "project-6955075453641709641.firebaseapp.com",
+      databaseURL: "https://project-6955075453641709641.firebaseio.com",
+      storageBucket: "project-6955075453641709641.appspot.com",
+    };
+    firebase.initializeApp(config);
+  </script>
+
 </body>
 </html>
